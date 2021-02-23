@@ -172,7 +172,7 @@ class SimpleRsaPlugin() : MethodCallHandler {
     private fun decryptData(encryptedMessage: ByteArray, privateKey: String): String {
 
         val cipher = Cipher.getInstance("RSA/ECB/PKCS1PADDING")
-        cipher.init(Cipher.DECRYPT_MODE, privateKey)
+        cipher.init(Cipher.DECRYPT_MODE, loadPrivateKey(privateKey))
         var limit: Int = 2048 / 8
         var position = 0
         val byteArrayOutputStream = ByteArrayOutputStream()
