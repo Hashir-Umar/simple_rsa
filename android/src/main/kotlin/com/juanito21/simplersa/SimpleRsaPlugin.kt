@@ -169,11 +169,20 @@ class SimpleRsaPlugin() : MethodCallHandler {
     }
 
     @Throws(NoSuchAlgorithmException::class, NoSuchPaddingException::class, InvalidKeyException::class, IllegalBlockSizeException::class, BadPaddingException::class)
-    private fun decryptData(encryptedBytes: ByteArray, privateKey: String): String {
-        val cipher1 = Cipher.getInstance("RSA/ECB/PKCS1PADDING")
-        cipher1.init(Cipher.DECRYPT_MODE, loadPrivateKey(privateKey))
-        val decryptedBytes = cipher1.doFinal(encryptedBytes)
-        return String(decryptedBytes)
+    private fun decryptData(encryptedMessage: ByteArray, privateKey: String): String {
+
+        val cipher = Cipher.getInstance(padding)
+        cipher.init(Cipher.DECRYPT_MODE, key)
+        var limit: Int = 2048 / 8
+        var position = 0
+        val byteArrayOutputStream = ByteArrayOutputStream()
+        while (position < encryptedMessage.size) {
+            if (encryptedMessage.size - position < limit) limit = encryptedMessage.size - position
+            val data = cipher.doFinal(encryptedMessage, position, limit)
+            byteArrayOutputStream.write(data)
+            position += limit
+        }
+        return String(byteArrayOutputStream.toByteArray())
     }
 
     @Throws(NoSuchAlgorithmException::class, NoSuchPaddingException::class, InvalidKeyException::class, IllegalBlockSizeException::class, BadPaddingException::class)
