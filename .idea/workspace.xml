@@ -9,8 +9,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dc198db-c5f9-4350-873a-981b4095d428" name="Default" comment="Edit encryptData for support input size greater then 512 bytes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6dc198db-c5f9-4350-873a-981b4095d428" name="Default" comment="version updated to 0.0.6">
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/juanito21/simplersa/SimpleRsaPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/juanito21/simplersa/SimpleRsaPlugin.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544630091545</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="version updated to 0.0.6">
+      <created>1614071957582</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614071957582</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -165,12 +172,21 @@
     <MESSAGE value="update readme" />
     <MESSAGE value="Add method for decrypt string (more 512 byte) with public key (ANDROID)" />
     <MESSAGE value="Edit encryptData for support input size greater then 512 bytes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit encryptData for support input size greater then 512 bytes" />
+    <MESSAGE value="version updated to 0.0.6" />
+    <option name="LAST_COMMIT_MESSAGE" value="version updated to 0.0.6" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2256" y="0" key="CommitChangelistDialog2" timestamp="1614071956534">
+      <screen x="1920" y="0" width="1536" height="824" />
+    </state>
+    <state x="2256" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1614071956534" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1614071315051">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1614071315051" />
+    <state x="2281" y="145" key="Vcs.Push.Dialog.v2" timestamp="1614071959063">
+      <screen x="1920" y="0" width="1536" height="824" />
+    </state>
+    <state x="2281" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1536.824@1920.0.1536.824" timestamp="1614071959063" />
   </component>
 </project>

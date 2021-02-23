@@ -15,7 +15,7 @@ import javax.crypto.BadPaddingException
 import javax.crypto.Cipher
 import javax.crypto.IllegalBlockSizeException
 import javax.crypto.NoSuchPaddingException
-
+import java.io.ByteArrayOutputStream
 
 
 
@@ -171,8 +171,8 @@ class SimpleRsaPlugin() : MethodCallHandler {
     @Throws(NoSuchAlgorithmException::class, NoSuchPaddingException::class, InvalidKeyException::class, IllegalBlockSizeException::class, BadPaddingException::class)
     private fun decryptData(encryptedMessage: ByteArray, privateKey: String): String {
 
-        val cipher = Cipher.getInstance(padding)
-        cipher.init(Cipher.DECRYPT_MODE, key)
+        val cipher = Cipher.getInstance("RSA/ECB/PKCS1PADDING")
+        cipher.init(Cipher.DECRYPT_MODE, privateKey)
         var limit: Int = 2048 / 8
         var position = 0
         val byteArrayOutputStream = ByteArrayOutputStream()
